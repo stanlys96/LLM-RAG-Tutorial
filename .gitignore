@@ -1,1 +1,7 @@
 venv
+.env
+chroma/
+chroma_db/
+chroma_data/
+*.sqlite3
+db
