@@ -1,4 +1,4 @@
-from langchain.text_splitter import CharacterTextSplitter, RecursiveCharacterTextSplitter
+from langchain_text_splitters import CharacterTextSplitter, RecursiveCharacterTextSplitter
 
 tesla_text = """Tesla's Q3 Results
 
@@ -16,7 +16,8 @@ This is one very long paragraph that definitely exceeds our 100 character limit 
 
 splitter1 = CharacterTextSplitter(
   separator="\n\n",
-  chunk_size=100
+  chunk_size=100,
+  chunk_overlap=0
 )
 
 chunks1 = splitter1.split_text(tesla_text)
